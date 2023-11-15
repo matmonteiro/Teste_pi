@@ -1,0 +1,326 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+/* Estilo para a tela de carregamento */
+.loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Cor de fundo preto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid#051802;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Estilo para o conteúdo  */
+.content {
+    display: none; 
+}
+
+
+
+.square {
+
+    background-color: #FFFFFF;
+
+    width: 150px;
+
+    height: 150px;
+
+    margin: 10px;
+
+    border-top-left-radius: 10%;
+
+    border-top-right-radius: 10%;
+
+    border-bottom-left-radius: 10%;
+
+    border-bottom-right-radius: 0;
+
+    background-size: cover;
+
+    background-position: center;
+
+    
+
+}
+
+
+
+
+
+.logo {
+
+    background-image: url('sua-imagem-de-logo.jpg');
+    
+
+    background-size: contain;
+
+    background-repeat: no-repeat;
+
+    height: 200px;
+
+    
+
+}
+
+
+
+/* Estilo para a seção de categorias */
+
+.categories {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+
+    margin-top: 0%;
+
+   
+}
+
+
+
+.category {
+
+    width: calc(33.33% - 20px);
+    
+
+    background-color: #375573;
+    
+
+    border-radius: 10px;
+   
+
+    padding: 10px;
+
+    text-align: center;
+
+    margin: 10px;
+
+    color: white;
+
+    text-decoration: none;
+
+
+}
+
+
+
+
+
+.categories {
+
+    background-color: #122940;
+   
+
+    border-radius: 10px;
+    
+
+    padding: 10px;
+
+}
+
+
+
+
+
+@media (max-width: 767px) {
+
+    .categories {
+
+        flex-direction: column;
+
+    }
+
+
+
+    .category {
+
+        width: 100%;
+        
+
+        margin: 10px 0;
+
+
+
+    }
+
+}
+
+
+
+
+
+/* Estilo para as setas de navegação */
+.seta-esquerda,
+.seta-direita {
+    font-size: 30px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    display: inline-block;
+    width: 40px;
+    text-align: center;
+    line-height: 40px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 50%;
+
+}
+
+.seta-direita {
+    transform: scaleX(-1);
+}
+
+
+.seta-esquerda:hover,
+.seta-direita:hover {
+    transform: scale(1.1);
+}
+
+
+#equipe {
+    text-align: center;
+
+
+}
+
+
+.equipe-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.equipe-item {
+    text-align: center;
+    margin: 10px;
+    color: white;
+}
+
+.equipe-item img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+
+
+.equipe-item:nth-child(n+4) {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .equipe-container {
+        justify-content: center;
+    }
+}
+
+
+.esquerda,
+.direita {
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: #122940;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 15px;
+    margin-top: 12px;
+}
+
+.esquerda,
+.direita i {
+    margin-right: 5px;
+}
+
+.esquerda:hover {
+    background-color: #375573;
+}
+
+.direita:hover {
+    background-color: #375573;
+}
+
+
+#sobre {
+    text-align: center;
+    max-width: 500px;
+    margin-top: 5% !important;
+    margin: 0 auto;
+
+}
+
+#sobre p {
+    word-wrap: break-word;
+   
+}
+
+.btn {
+    border: none !important;
+    outline: none;
+    
+    background-color: #2BFDBE !important;
+    
+    color: black !important;
+    
+    border-top-left-radius: 10px !important;
+    
+    border-top-right-radius: 10px !important;
+ 
+    border-bottom-left-radius: 10px !important;
+   
+    border-bottom-right-radius: 0 !important;
+}
+
+.btn:hover {
+    background-color: #BADEFF !important;
+    box-shadow: 1px 1px 20px #BADEFF;
+    color: black !important;    
+
+}
+
+/* .botao-matricule-se {
+    border-color: #10263B !important;
+    outline: none;
+
+    background-color: #10263B !important;
+    
+    color: white !important;
+    
+    border-top-left-radius: 10px !important;
+    
+    border-top-right-radius: 10px !important;
+ 
+    border-bottom-left-radius: 10px !important;
+   
+    border-bottom-right-radius: 0 !important;
+} */
+
